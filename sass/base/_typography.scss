@@ -1,5 +1,15 @@
 // vezano za tekst izgled teksta
 // cak i body a u body ostavim ostale stvari
+
+@font-face {
+  font-family: FuturaPtLight;
+  src: url("../../assets/fonts/FuturaCyrillicLight.ttf");
+}
+@font-face {
+  font-family: AspergitBold;
+  src: url("../../assets/fonts/Aspergit\ Bold.otf");
+}
+
 html {
   font-size: 62.5%;
 }
@@ -16,14 +26,16 @@ body {
 .CTA {
   font-weight: 700;
   size: 18px;
-  font-family: "Nunito", sans-serif;
+  font-family: AspergitBold, 'Nunito', sans-serif;
+  // font-family: "Nunito", sans-serif;
   line-height: 19.98px;
   letter-spacing: -0.03em;
   text-align: center;
 }
 
 .small {
-  font-family: "Poppins", sans-serif;
+  font-family: FuturaLight;
+  // font-family: "Poppins", sans-serif;
   font-size: 28px;
   font-weight: 300;
   line-height: 32px;
@@ -51,7 +63,7 @@ h4 {
 
 h3 {
   // font-family: Aspergit;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 54px;
   font-weight: 700;
   line-height: 77px;
@@ -60,21 +72,20 @@ h3 {
 
 h2 {
   //styleName: h2;
-// font-family: Aspergit;
-font: 'Nunito', sans-serif;
-font-size: 94px;
-font-weight: 700;
-line-height: 109.98px;
-letter-spacing: -0.03em;
-text-align: left;
+  // font-family: Aspergit;
+  font: "Nunito", sans-serif;
+  font-size: 94px;
+  font-weight: 700;
+  line-height: 109.98px;
+  letter-spacing: -0.03em;
+  text-align: left;
 }
 
 h1 {
-font: 'Nunito', sans-serif;
+  font: "Nunito", sans-serif;
   // font-family: Aspergit;
-font-size: 113px;
-font-weight: 700;
-line-height: 132.21px;
-text-align: left;
-
+  font-size: 113px;
+  font-weight: 700;
+  line-height: 132.21px;
+  text-align: left;
 }
