@@ -1,10 +1,18 @@
-// reset html body
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-light;
+}
 
 body {
-    .poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
+  max-width: 192rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: $color-primary;
+
 
 }
