@@ -28,12 +28,13 @@
 
   &__secondHr {
     position: absolute;
-    top: 40px;
-    right: 313px;
-    transform: rotate(-90deg);
+    top: 50%;
+    left: 8rem;
+    transform:translateY(50%);
   }
 
-  ul {
+  &__list {
+    position: relative;
     list-style: none;
     display: flex;
     justify-content: space-between;
