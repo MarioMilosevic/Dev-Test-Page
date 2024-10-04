@@ -1,0 +1,50 @@
+.whyPygear {
+  width: 137.6rem;
+  height: 80rem;
+  margin-left: 25.8rem;
+  padding: 5rem 2rem 15rem;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  &__title {
+    text-transform: uppercase;
+    @include respond(phone) {
+      font-size: $font-small;
+    }
+    @include respond(tablet) {
+      font-size: $font-medium;
+    }
+    @include respond(desktop) {
+      font-size: $font-veryBig;
+    }
+    &--span {
+      color: $color-green;
+    }
+  }
+
+  &__span {
+    color: $color-green;
+    font-family: AspergitBold;
+  }
+
+  &__articles {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+    }
+
+    &-vector {
+        position: absolute;
+        top: 32rem;
+        left: 33rem;
+    }
+  }
+}
