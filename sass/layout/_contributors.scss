@@ -1,15 +1,34 @@
 .contributors {
   padding-top: 96rem;
-  position:relative;
+  position: relative;
+
+  @include respond(phone) {
+  }
+
+  @include respond(tablet) {
+  }
+
+  @include respond(desktop) {
+  }
 
   &__container {
     position: absolute;
     top: 4rem;
-    left: 0;
-    border: 1px solid white;
-    width: 137.5rem;
-    height: 118.2rem;
-    margin-left: 25.8rem;
+    @include respond(phone) {
+      top: 4rem;
+    }
+
+    @include respond(tablet) {
+      top: 4rem;
+      left: 3rem;
+    }
+
+    @include respond(desktop) {
+      top: 4rem;
+      left: 25.8rem;
+      max-width: 137.5rem;
+      max-height: 118.2rem;
+    }
 
     &-title {
       text-transform: uppercase;
@@ -17,30 +36,63 @@
 
     &-subtitle {
       color: $color-green;
+      position: static;
+      @include respond(phone) {
+        position:absolute;
+        top: 10rem;
+        right: 3rem;
+  }
     }
+
     &-tertiaryTitle {
       padding-top: 8rem;
-      //   color: $color-green;
     }
 
     &-job {
       font-size: 24px;
+      @include respond(phone) {
+        position:absolute;
+        top: 20rem;
+        right: 5rem;
+  }
     }
 
     &-articles {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10rem;
+      @include respond(phone) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+      }
+
+      @include respond(tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+      }
+
+      @include respond(desktop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10rem;
+      }
 
       &--article {
         position: relative;
         &---button {
           position: absolute;
-          bottom: -6rem;
-          right: 20%;
           background-color: $color-primary;
           border: none;
           cursor: pointer;
+
+          @include respond(phone) {
+            bottom: -6rem;
+            left: 0;
+          }
+
+          @include respond(desktop) {
+            bottom: -6rem;
+            right: 20%;
+          }
         }
       }
     }
