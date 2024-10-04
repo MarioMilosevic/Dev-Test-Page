@@ -6,17 +6,18 @@
 // 900-1200 tablet landscape
 // 1800+ big screen
 
-@mixin respond-phone {
-  @media (max-width: 600px) {
-    @content;
-  }
-}
 // breakpoint choices
 // phone 37.5em 600px
 //  tab-port 56.25em 900px
 // tab-land 75em 1200px
 // desktop 112.5em 1800px
-// EMs 
+// EMs
+
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
@@ -24,18 +25,13 @@
       @content;
     }
   }
-  @if $breakpoint == tab-port {
-    @media (max-width: 900px) {
+  @if $breakpoint == tablet {
+    @media (min-width: 601px) and (max-width: 1200px) {
       @content;
     }
   }
-  @if $breakpoint == tab-land {
-    @media (max-width: 1200px) {
-      @content;
-    }
-  }
-  @if $breakpoint == big-desktop {
-    @media (min-width: 1800px) {
+  @if $breakpoint == desktop {
+    @media (min-width: 1201px) {
       @content;
     }
   }

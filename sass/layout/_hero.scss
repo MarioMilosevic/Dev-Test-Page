@@ -75,13 +75,18 @@
       bottom: 0;
       right: 0;
     }
+
+    &-img {
+      width: 11.4rem;
+      height: 10rem;
+    }
   }
 
   &__sideVectors {
     width: 7.6rem;
     height: 19rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     justify-items: end;
     align-items: center;
     position: absolute;

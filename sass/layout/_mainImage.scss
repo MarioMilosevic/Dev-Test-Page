@@ -1,11 +1,23 @@
 .main__image {
-    padding: 7.9rem 0 5.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 7.9rem 0 5.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &__photo{
-        width: 134.6rem;
-        height: 82.7rem;
-    }
+  &__photo {
+    width: 134.6rem;
+    height: 82.7rem;
+  }
+
+  &--sideVectors {
+    width: 7.7rem;
+    height: 19rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 186.6rem;
+  }
 }
