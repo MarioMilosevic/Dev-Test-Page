@@ -7,6 +7,14 @@
   padding: 0 16rem;
   position: relative;
 
+  &__vector {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    top: 7.9rem;
+    left: 96rem;
+  }
+
   &__logo {
     width: 21.717rem;
     height: 4rem;

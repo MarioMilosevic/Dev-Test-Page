@@ -1,6 +1,3 @@
-// vezano za tekst izgled teksta
-// cak i body a u body ostavim ostale stvari
-
 @font-face {
   font-family: FuturaPtLight;
   src: url("../../assets/fonts/FuturaCyrillicLight.ttf");
@@ -15,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: FuturaPTLight,"Poppins", sans-serif;
   font-weight: 300;
   font-size: 30px;
   line-height: 33px;
@@ -27,15 +24,13 @@ body {
   font-weight: 700;
   size: 18px;
   font-family: AspergitBold, 'Nunito', sans-serif;
-  // font-family: "Nunito", sans-serif;
   line-height: 19.98px;
   letter-spacing: -0.03em;
   text-align: center;
 }
 
 .small {
-  font-family: FuturaLight;
-  // font-family: "Poppins", sans-serif;
+  font-family: FuturaLight, 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 300;
   line-height: 32px;

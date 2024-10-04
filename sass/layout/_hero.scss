@@ -1,29 +1,27 @@
-.hero__section {
-  // border: 1px solid white;
+.hero {
   width: 167.4rem;
   height: 55.5rem;
+  margin: 17.2rem 0 0 21rem;
   position: relative;
-  left: 21rem;
-  top: 17.2rem;
+  border: 1px solid white;
+  margin-bottom: 14.7rem;
 
-  &--titleContainer {
-    // border: 1px solid white;
+  &__titleContainer {
     display: flex;
     justify-content: space-between;
   }
 
-  &--title {
-    // border: 1px solid white;
+  &__title {
     text-transform: uppercase;
     width: 156rem;
     height: 26.5rem;
   }
 
-  &--span {
+  &__span {
     color: $color-green;
   }
 
-  &--list {
+  &__list {
     height: 26.4rem;
     list-style: none;
     display: flex;
@@ -33,6 +31,51 @@
     li {
       width: 2.4rem;
       height: 2.4rem;
+    }
+  }
+
+  &__paragraph {
+    width: 65.7rem;
+    height: 6.6rem;
+    position: relative;
+    left: 90.3rem;
+    margin-top: 1.7rem;
+  }
+
+  &__cta-container {
+    width: 29.7rem;
+    height: 11.4rem;
+    position: absolute;
+    top: 37.7rem;
+    right: 36rem;
+
+    &__button {
+      background-color: $color-primary;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__vectors {
+    border: 1px solid white;
+    width: 27.1rem;
+    height: 26.6rem;
+    position: absolute;
+    left: 46.5rem;
+    top: 37.7rem;
+    &-lines {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }
