@@ -185,13 +185,28 @@
   }
 
   &__sideVectors {
-    width: 7.6rem;
-    height: 19rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: end;
     align-items: center;
     position: absolute;
-    top: 84.8rem;
+
+    @include respond(phone) {
+      top: 45rem;
+      width: 2rem;
+      height: 6rem;
+    }
+
+    @include respond(tablet) {
+      top: 50rem;
+      width: 6rem;
+      height: 12rem;
+    }
+
+    @include respond(desktop) {
+      width: 7.6rem;
+      height: 19rem;
+      top: 84.8rem;
+    }
   }
 }

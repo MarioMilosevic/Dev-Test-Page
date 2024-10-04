@@ -1,19 +1,42 @@
-.pygear{
-    border: 1px solid white;
-    width: 137.5rem;
-    height: 118.9rem;
-    margin-left: 25.8rem;
-    margin-top: 18.9rem;
+.pygear {
+  width: 137.5rem;
+  height: 118.9rem;
+  margin-left: 25.8rem;
+  margin-top: 18.9rem;
 
-    &__textContainer{
-        width: 96.2rem;
-        height: 43.7rem;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
-        &-title {
-               text-transform: uppercase;
+    &-title {
+      text-transform: uppercase;
+      font-size: $font-veryBig;
+      &--span {
+        color: $color-green;
+      }
+    }
+  }
 
-        }
+  &__textContainer {
+    display: flex;
+    width: 100%;
+
+    &-paragraph {
+      width: 50%;
+
+      &--span {
+        display: block;
+        margin-top: 2rem;
+      }
     }
 
-
+    &-vectors {
+      width: 50%;
+      display: flex;
+      padding-top: 8rem;
+      justify-content: center;
+      align-items: start;
+    }
+  }
 }

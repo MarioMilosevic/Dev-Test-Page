@@ -1,23 +1,61 @@
 .main__image {
-  padding: 7.9rem 0 5.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__photo {
-    width: 134.6rem;
-    height: 82.7rem;
+    max-width: 134.6rem;
+    max-height: 82.7rem;
+
+    @include respond(phone) {
+      margin: 5rem;
+    }
+    @include respond(tablet) {
+      margin: 5rem 0;
+    }
+
+    @include respond(desktop) {
+      margin: 7.9rem 0 15rem;
+    }
+
+    img {
+      @include respond(phone) {
+        width: 100%;
+      }
+      @include respond(tablet) {
+        width: 100%;
+      }
+
+      @include respond(desktop) {
+        width: 100%;
+      }
+    }
   }
 
   &--sideVectors {
-    width: 7.7rem;
-    height: 19rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: end;
     align-items: center;
     position: absolute;
     right: 0;
-    top: 186.6rem;
+
+    @include respond(phone) {
+      width: 5rem;
+      height: 10rem;
+      top: 85rem;
+    }
+
+    @include respond(tablet) {
+      width: 7rem;
+      height: 15rem;
+      top: 130rem;
+    }
+
+    @include respond(desktop) {
+      width: 7.7rem;
+      height: 19rem;
+      top: 186.6rem;
+    }
   }
 }
