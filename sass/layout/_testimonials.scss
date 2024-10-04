@@ -1,0 +1,57 @@
+.testimonials {
+  padding-top: 30rem;
+  padding-bottom: 50rem;
+  position: relative;
+
+  &__leftVector {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+  }
+
+  &__colorVectors {
+    position: absolute;
+    right: 50%;
+    top: 20rem;
+    transform: translateX(50%);
+  }
+
+  &__container {
+    padding-top: 5rem;
+    width: 134.7rem;
+    height: 46.4rem;
+    margin-left: 28.7rem;
+    display: flex;
+
+    &-title {
+      color: $color-green;
+    }
+    &-subtitle {
+      padding-bottom: 5rem;
+    }
+
+    &-founder {
+      position: relative;
+      padding-left: 18rem;
+      &--img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &-text {
+      &--singleVector {
+        position: absolute;
+        top: 50rem;
+        right: -15rem;
+      }
+
+      &--doubleVector {
+        position: absolute;
+        top: 12rem;
+        left: -7rem;
+      }
+    }
+  }
+}
