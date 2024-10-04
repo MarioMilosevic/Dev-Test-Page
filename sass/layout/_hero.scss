@@ -1,9 +1,21 @@
 .hero {
-  width: 167.4rem;
-  height: 55.5rem;
-  margin: 17.2rem 0 0 21rem;
+  max-width: 167.4rem;
+  max-height: 55.5rem;
   position: relative;
-  margin-bottom: 14.7rem;
+  //   padding-bottom: 0rem;
+
+  @include respond(phone) {
+    margin: 8rem 0 0 2rem;
+    padding-bottom: 17rem;
+  }
+  @include respond(tablet) {
+    padding-bottom: 27rem;
+    margin: 8rem 0 0 5rem;
+  }
+  @include respond(desktop) {
+    margin: 17.2rem 0 0 21rem;
+    padding-bottom: 70rem;
+  }
 
   &__titleContainer {
     display: flex;
@@ -11,9 +23,24 @@
   }
 
   &__title {
+    font-family: AspergitBold, "Nunito", sans-serif;
     text-transform: uppercase;
-    width: 156rem;
-    height: 26.5rem;
+    max-width: 156rem;
+    max-height: 26.5rem;
+    text-align: left;
+    font-weight: $font-bold;
+    @include respond(phone) {
+      font-size: $font-small;
+      line-height: $font-small;
+    }
+    @include respond(tablet) {
+      font-size: $font-medium;
+      line-height: $font-medium;
+    }
+    @include respond(desktop) {
+      font-size: $font-large;
+      line-height: $lineSpacing-large;
+    }
   }
 
   &__span {
@@ -21,32 +48,87 @@
   }
 
   &__list {
-    height: 26.4rem;
+    max-height: 26.4rem;
     list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
+    position: absolute;
+    gap: 2rem;
+    transform: translateY(50%);
+    top: 50%;
+
+    left: 5px;
+
+    @include respond(phone) {
+      top: 25%;
+      flex-direction: row;
+      gap: 2rem;
+      left: 5px;
+    }
+    @include respond(tablet) {
+      top: 30%;
+      flex-direction: row;
+      gap: 2rem;
+      left: 5px;
+    }
+
+    @include respond(desktop) {
+      position: static;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
 
     li {
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @include respond(desktop) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
     }
   }
 
   &__paragraph {
-    width: 65.7rem;
-    height: 6.6rem;
-    position: relative;
-    left: 90.3rem;
+    max-width: 65.7rem;
+    max-height: 6.6rem;
     margin-top: 1.7rem;
+
+    @include respond(phone) {
+      margin-top: 10rem;
+      margin-left: 1rem;
+      font-size: $font-extraSmall;
+    }
+
+    @include respond(tablet) {
+      margin-left: 25rem;
+      font-size: $font-small;
+    }
+
+    @include respond(desktop) {
+      margin-left: 90.3rem;
+      font-size: $font-normal;
+    }
   }
 
   &__cta-container {
-    width: 29.7rem;
-    height: 11.4rem;
+    max-width: 29.7rem;
+    max-height: 11.4rem;
     position: absolute;
-    top: 37.7rem;
-    right: 36rem;
+
+    @include respond(phone) {
+      top: 28rem;
+      right: 25rem;
+    }
+
+    @include respond(tablet) {
+      top: 23rem;
+      right: 25rem;
+    }
+
+    @include respond(desktop) {
+      top: 45rem;
+      right: 72rem;
+    }
 
     &__button {
       background-color: $color-primary;
@@ -65,11 +147,31 @@
   }
 
   &__vectors {
-    width: 27.1rem;
-    height: 26.6rem;
+    max-width: 27.1rem;
+    max-height: 26.6rem;
     position: absolute;
-    left: 46.5rem;
-    top: 37.7rem;
+
+    @include respond(phone) {
+      height: 15rem;
+      width: 16rem;
+      left: 0rem;
+      top: 20rem;
+    }
+
+    @include respond(tablet) {
+      height: 20rem;
+      width: 21rem;
+      left: 20rem;
+      top: 18rem;
+    }
+
+    @include respond(desktop) {
+      width: 27.1rem;
+      height: 26.6rem;
+      left: 46.5rem;
+      top: 37.7rem;
+    }
+
     &-lines {
       position: absolute;
       bottom: 0;

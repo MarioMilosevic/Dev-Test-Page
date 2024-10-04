@@ -7,79 +7,99 @@
   src: url("../../assets/fonts/Aspergit\ Bold.otf");
 }
 
+$font-extraSmall:18px;
+$font-small:28px;
+$font-normal:30px;
+$font-medium:44px;
+$font-big:54px;
+$font-veryBig:94px;
+$font-large:113px;
+
+
+$lineSpacing-extraSmall: 19.98px;
+$lineSpacing-smaller: 30px;
+$lineSpacing-small: 32px;
+$lineSpacing-normal: 33px;
+$lineSpacing-medium: 50px;
+$lineSpacing-big: 77px;
+$lineSpacing-veryBig: 109.98px;
+$lineSpacing-large: 132.21px;
+
+$font-bold:700;
+$font-light:300;
+
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: FuturaPTLight,"Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 33px;
+  font-weight: $font-light;
+  font-size: $font-normal;
+  line-height: $lineSpacing-normal;
   letter-spacing: -0.04em;
   text-align: left;
 }
 
 .CTA {
-  font-weight: 700;
-  size: 18px;
+  font-weight: $font-bold;
+  font-size: $font-extraSmall;
   font-family: AspergitBold, 'Nunito', sans-serif;
-  line-height: 19.98px;
+  line-height: $lineSpacing-extraSmall;
   letter-spacing: -0.03em;
   text-align: center;
 }
 
 .small {
   font-family: FuturaLight, 'Poppins', sans-serif;
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 32px;
+  font-size: $font-small;
+  font-weight: $font-light;
+  line-height: $lineSpacing-small;
   letter-spacing: -0.04em;
   text-align: left;
 }
 
 h5 {
-  font-family: "Nunito", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 30px;
+  font-family: AspergitBold, "Nunito", sans-serif;
+  font-size: $font-normal;
+  font-weight: $font-bold;
+  line-height: $lineSpacing-smaller;
   letter-spacing: -0.02em;
   text-align: left;
 }
 
 h4 {
-  font-family: "Nunito", sans-serif;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 50px;
+  font-family: AspergitBold,"Nunito", sans-serif;
+  font-size: $font-medium;
+  font-weight: $font-bold;
+  line-height: $lineSpacing-medium;
   letter-spacing: 0.02em;
   text-align: left;
 }
 
 h3 {
   // font-family: Aspergit;
-  font-family: "Nunito", sans-serif;
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 77px;
+  font-family: AspergitBold,"Nunito", sans-serif;
+  font-size: $font-big;
+  font-weight: $font-bold;
+  line-height: $lineSpacing-big;
   text-align: left;
 }
 
 h2 {
-  //styleName: h2;
-  // font-family: Aspergit;
-  font: "Nunito", sans-serif;
-  font-size: 94px;
-  font-weight: 700;
-  line-height: 109.98px;
+  font: AspergitBold,"Nunito", sans-serif;
+  font-size: $font-veryBig;
+  font-weight: $font-bold;
+  line-height: $lineSpacing-veryBig;
   letter-spacing: -0.03em;
   text-align: left;
 }
 
-h1 {
-  font-family: AspergitBold, 'Nunito', sans-serif;
-  font-size: 113px;
-  font-weight: 700;
-  line-height: 132.21px;
-  text-align: left;
-}
+// h1 {
+//   font-family: AspergitBold, 'Nunito', sans-serif;
+//   font-size: $font-large;
+//   font-weight: $font-bold;
+//   line-height: $lineSpacing-large;
+//   text-align: left;
+// }

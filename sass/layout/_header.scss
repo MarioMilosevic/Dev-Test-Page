@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // padding: 0 16rem;
   position: relative;
 
   @include respond(phone) {
@@ -18,10 +17,14 @@
 
   &__vector {
     position: absolute;
+    left: 50%;
+    transform: translate(50%, 0);
     width: 6rem;
     height: 6rem;
-    top: 7.9rem;
-    left: 96rem;
+
+    @include respond(phone) {
+      left: 45%;
+    }
   }
 
   &__logo {
@@ -31,20 +34,19 @@
 
   &__firstHr {
     position: absolute;
-   
-  @include respond(phone) {
-     top:2.2rem;
-    left: 18rem;
-  }
-  @include respond(tablet) {
-    top:3.4rem;
-    left: 20rem;
-  }
-  @include respond(desktop) {
-  top: 3.6rem;
-    left: 33rem;
-  }
 
+    @include respond(phone) {
+      top: 2.2rem;
+      left: 18rem;
+    }
+    @include respond(tablet) {
+      top: 3.4rem;
+      left: 20rem;
+    }
+    @include respond(desktop) {
+      top: 3.6rem;
+      left: 33rem;
+    }
   }
 
   &__secondHr {
@@ -53,18 +55,18 @@
     left: 8rem;
     transform: translateY(50%);
 
-  @include respond(phone) {
-    display: none;
-  }
-  @include respond(tablet) {
-    display: none;
-  }
-  @include respond(tablet) {
-    display: none;
-  }
-  @include respond(desktop) {
-    display: block;
-  }
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(tablet) {
+      display: none;
+    }
+    @include respond(tablet) {
+      display: none;
+    }
+    @include respond(desktop) {
+      display: block;
+    }
   }
 
   &__list {
@@ -124,12 +126,12 @@
     flex-direction: column;
     gap: 2rem;
     transition-duration: 0.7s;
-    transform:translateX(100%);
+    transform: translateX(100%);
     top: 10px;
     right: 0;
     position: absolute;
 
-    @include respond(desktop){
+    @include respond(desktop) {
     }
 
     a {
@@ -144,15 +146,8 @@
       right: 5px;
       width: 30px;
       height: 30px;
-      cursor:pointer;
+      cursor: pointer;
     }
-  }
-
-  @include respond(phone) {
-    // background-color: red;
-  }
-  @include respond(tablet) {
-    background-color: red;
   }
   @include respond(tablet) {
     height: 7rem;
