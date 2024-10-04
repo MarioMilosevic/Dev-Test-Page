@@ -1,50 +1,114 @@
 .whyPygear {
-  width: 137.6rem;
-  height: 80rem;
-  margin-left: 25.8rem;
-  padding: 5rem 2rem 15rem;
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-
-  &__title {
-    text-transform: uppercase;
+  &__container {
     @include respond(phone) {
-      font-size: $font-small;
+      padding: 5rem 2rem;
     }
     @include respond(tablet) {
-      font-size: $font-medium;
+      margin-left: 15rem;
+      padding: 5rem 2rem;
     }
     @include respond(desktop) {
-      font-size: $font-veryBig;
+      max-width: 137.6rem;
+      max-height: 80rem;
+      margin-left: 25.8rem;
+      padding: 5rem 2rem 15rem;
     }
-    &--span {
-      color: $color-green;
+
+    &-title {
+      text-transform: uppercase;
+      font-family: AspergitBold;
+
+      &--span {
+        color: $color-green;
+      }
     }
-  }
 
-  &__span {
-    color: $color-green;
-    font-family: AspergitBold;
-  }
+    &-articles {
+      padding-top: 4rem;
+      position: relative;
 
-  &__articles {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-
-    article {
+      @include respond(phone) {
         display: flex;
         flex-direction: column;
-        gap:2rem;
-    }
+        gap: 1rem;
+      }
+      @include respond(tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      @include respond(desktop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+      }
 
-    &-vector {
+      article {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+        @include respond(tablet) {
+          width: 50%;
+        }
+        @include respond(desktop) {
+          width: 100%;
+        }
+      }
+
+      &--doubleVector {
         position: absolute;
-        top: 32rem;
-        left: 33rem;
+
+        @include respond(phone) {
+          top: 35rem;
+          left: 42rem;
+        }
+        @include respond(tablet) {
+          top: 35rem;
+          left: 40rem;
+        }
+        @include respond(desktop) {
+          top: 35rem;
+          left: 33rem;
+        }
+      }
+
+      &--singleVector {
+        position: absolute;
+
+        @include respond(phone) {
+          top: -5rem;
+          right: 4rem;
+        }
+        @include respond(tablet) {
+          top: -7rem;
+          right: 13rem;
+        }
+        @include respond(desktop) {
+          top: -7rem;
+          right: -15rem;
+        }
+      }
     }
+  }
+
+  &__sideVectors {
+    position: absolute;
+  
+       @include respond(phone) {
+         top: 300rem;
+        right: -11.6rem;
+        }
+        @include respond(tablet) {
+        top: 300rem;
+        right: 0;
+        }
+        @include respond(desktop) {
+     top: 360rem;
+    right: 0;
+        }
   }
 }
