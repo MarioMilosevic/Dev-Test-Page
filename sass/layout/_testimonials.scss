@@ -1,7 +1,19 @@
 .testimonials {
-  padding-top: 30rem;
-  padding-bottom: 50rem;
   position: relative;
+  padding-bottom: 50rem;
+
+  @include respond(phone) {
+    padding-top: 5rem;
+  }
+
+  @include respond(tablet) {
+    padding-top: 15rem;
+  }
+
+  @include respond(desktop) {
+    padding-top: 30rem;
+    //   padding-bottom: 50rem;
+  }
 
   &__leftVector {
     position: absolute;
@@ -14,25 +26,74 @@
     right: 50%;
     top: 20rem;
     transform: translateX(50%);
+
+    @include respond(phone) {
+      top: 8rem;
+    }
   }
 
   &__container {
     padding-top: 5rem;
-    width: 134.7rem;
-    height: 46.4rem;
-    margin-left: 28.7rem;
+
     display: flex;
+
+    @include respond(phone) {
+      padding-top: 8rem;
+      flex-direction: column;
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
+      padding-top: 8rem;
+    }
+
+    @include respond(desktop) {
+      flex-direction: row;
+      padding-top: 5rem;
+      margin-left: 28.7rem;
+      max-width: 134.7rem;
+      max-height: 46.4rem;
+    }
+
+    // &-image {
+
+    // }
 
     &-title {
       color: $color-green;
+      @include respond(phone) {
+        font-size: $font-small;
+      }
+      @include respond(tablet) {
+        font-size: $font-medium;
+      }
     }
     &-subtitle {
       padding-bottom: 5rem;
+
+      @include respond(phone) {
+        font-size: $font-small;
+      }
+      @include respond(tablet) {
+        font-size: $font-normal;
+      }
     }
 
     &-founder {
       position: relative;
-      padding-left: 18rem;
+
+      @include respond(phone) {
+        padding-left: 7rem;
+      }
+
+      @include respond(tablet) {
+        padding-left: 8rem;
+      }
+
+      @include respond(desktop) {
+        padding-left: 18rem;
+      }
+
       &--img {
         position: absolute;
         top: 0;
@@ -41,16 +102,52 @@
     }
 
     &-text {
+      @include respond(phone) {
+        font-size: $font-extraSmall;
+      }
+      @include respond(tablet) {
+        font-size: $font-small;
+      }
+      @include respond(desktop) {
+        font-size: $font-normal;
+      }
+
       &--singleVector {
         position: absolute;
-        top: 50rem;
-        right: -15rem;
+
+        @include respond(phone) {
+          top: 27rem;
+          right: 1rem;
+        }
+
+        @include respond(tablet) {
+          top: 40rem;
+          right: 1rem;
+        }
+
+        @include respond(desktop) {
+          top: 50rem;
+          right: 1rem;
+        }
       }
 
       &--doubleVector {
         position: absolute;
-        top: 12rem;
-        left: -7rem;
+
+        @include respond(phone) {
+          top: -31rem;
+          left: 32rem;
+        }
+
+        @include respond(tablet) {
+          top: -31rem;
+          left: 34rem;
+        }
+
+        @include respond(desktop) {
+          top: 12rem;
+          left: -7rem;
+        }
       }
     }
   }
