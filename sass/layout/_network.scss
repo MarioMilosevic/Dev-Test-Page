@@ -31,23 +31,6 @@
       height: 89.2rem;
     }
 
-    &-title {
-      text-transform: uppercase;
-
-      @include respond(phone) {
-        font-size: $font-small;
-        line-height: $lineSpacing-medium;
-      }
-
-      @include respond(tablet) {
-        font-size: $font-medium;
-        line-height: $lineSpacing-big;
-      }
-
-      @include respond(desktop) {
-      }
-    }
-
     &-span {
       color: $color-green;
     }
@@ -161,26 +144,8 @@
           left: 103rem;
         }
       }
-
-      // &---vectorImg {
-      //   width: 5%;
-      // }
-
-      // &---logoImg {
-      //   position: absolute;
-      //   top: 50%;
-      //   left: 50%;
-      //   transform: translate(-50%, -50%);
-      // }
     }
   }
 }
 
-//  @include respond(phone) {
-//   }
 
-//   @include respond(tablet) {
-//   }
-
-//   @include respond(desktop) {
-//   }

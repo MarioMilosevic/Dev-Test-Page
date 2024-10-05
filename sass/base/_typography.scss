@@ -7,14 +7,13 @@
   src: url("../../assets/fonts/Aspergit\ Bold.otf");
 }
 
-$font-extraSmall:18px;
-$font-small:28px;
-$font-normal:30px;
-$font-medium:44px;
-$font-big:54px;
-$font-veryBig:94px;
-$font-large:113px;
-
+$font-extraSmall: 18px;
+$font-small: 28px;
+$font-normal: 30px;
+$font-medium: 44px;
+$font-big: 54px;
+$font-veryBig: 94px;
+$font-large: 113px;
 
 $lineSpacing-extraSmall: 19.98px;
 $lineSpacing-smaller: 30px;
@@ -25,16 +24,15 @@ $lineSpacing-big: 77px;
 $lineSpacing-veryBig: 109.98px;
 $lineSpacing-large: 132.21px;
 
-$font-bold:700;
-$font-light:300;
-
+$font-bold: 700;
+$font-light: 300;
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: FuturaPTLight,"Poppins", sans-serif;
+  font-family: FuturaPTLight, "Poppins", sans-serif;
   font-weight: $font-light;
   font-size: $font-normal;
   line-height: $lineSpacing-normal;
@@ -45,14 +43,14 @@ body {
 .CTA {
   font-weight: $font-bold;
   font-size: $font-extraSmall;
-  font-family: AspergitBold, 'Nunito', sans-serif;
+  font-family: AspergitBold, "Nunito", sans-serif;
   line-height: $lineSpacing-extraSmall;
   letter-spacing: -0.03em;
   text-align: center;
 }
 
 .small {
-  font-family: FuturaLight, 'Poppins', sans-serif;
+  font-family: FuturaLight, "Poppins", sans-serif;
   font-size: $font-small;
   font-weight: $font-light;
   line-height: $lineSpacing-small;
@@ -70,7 +68,7 @@ h5 {
 }
 
 h4 {
-  font-family: AspergitBold,"Nunito", sans-serif;
+  font-family: AspergitBold, "Nunito", sans-serif;
   font-size: $font-medium;
   font-weight: $font-bold;
   line-height: $lineSpacing-medium;
@@ -79,7 +77,7 @@ h4 {
 }
 
 h3 {
-  font-family: AspergitBold,"Nunito", sans-serif;
+  font-family: AspergitBold, "Nunito", sans-serif;
   font-size: $font-big;
   font-weight: $font-bold;
   line-height: $lineSpacing-big;
@@ -87,7 +85,7 @@ h3 {
 }
 
 h2 {
-  font: AspergitBold,"Nunito", sans-serif;
+  font: AspergitBold, "Nunito", sans-serif;
   font-size: $font-veryBig;
   font-weight: $font-bold;
   line-height: $lineSpacing-veryBig;
@@ -96,9 +94,20 @@ h2 {
 }
 
 h1 {
-  font-family: AspergitBold, 'Nunito', sans-serif;
-  font-size: $font-large;
-  font-weight: $font-bold;
-  line-height: $lineSpacing-large;
+  font-family: AspergitBold, "Nunito", sans-serif;
   text-align: left;
+  text-transform: uppercase;
+  @include respond(phone) {
+    font-size: $font-small;
+    line-height: $lineSpacing-medium;
+  }
+  @include respond(tablet) {
+    font-size: $font-medium;
+    line-height: $lineSpacing-big;
+  }
+  @include respond(desktop) {
+    font-size: $font-large;
+    font-weight: $font-bold;
+    line-height: $lineSpacing-large;
+  }
 }

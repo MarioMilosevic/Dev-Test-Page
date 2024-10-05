@@ -1,0 +1,74 @@
+.introduction {
+  border: 1px solid white;
+
+  position: relative;
+
+  @include respond(phone) {
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+
+  @include respond(tablet) {
+    margin-left: 5rem;
+    margin-top: 8rem;
+  }
+
+  @include respond(desktop) {
+    height: 94rem;
+    width: 137.5rem;
+    margin-left: 25.8rem;
+    padding-bottom: 130rem;
+  }
+
+  &__vector {
+    position: absolute;
+
+    @include respond(phone) {
+      top: 0rem;
+      left: 45rem;
+    }
+
+    @include respond(tablet) {
+      top: 0rem;
+      left: 45rem;
+    }
+
+    @include respond(desktop) {
+      top: -2.7rem;
+      left: -13rem;
+    }
+  }
+  &__rightVector {
+    position: absolute;
+    top: 9rem;
+    right: 24rem;
+  }
+
+  &__video {
+    margin-top: 5rem;
+    @include respond(desktop) {
+      width: 134.36rem;
+      height: 66.3rem;
+    }
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &__rightVectors {
+    position: absolute;
+    top: 100rem;
+    right: -25rem;
+  }
+  &__lines {
+    position: absolute;
+    top: 120rem;
+    right: 50rem;
+  }
+  &__leftCircles {
+    position: absolute;
+    top: 120rem;
+    left: -26rem;
+  }
+}
