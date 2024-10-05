@@ -11,7 +11,8 @@
       max-width: 137.6rem;
       max-height: 80rem;
       margin-left: 25.8rem;
-      padding: 5rem 2rem 15rem;
+      margin-bottom: 10rem;
+      padding: 5rem 2rem 25rem;
     }
 
     &-title {
@@ -107,7 +108,7 @@
         right: 0;
         }
         @include respond(desktop) {
-     top: 360rem;
+     top: 380rem;
     right: 0;
         }
   }

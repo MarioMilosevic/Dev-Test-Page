@@ -79,7 +79,6 @@ h4 {
 }
 
 h3 {
-  // font-family: Aspergit;
   font-family: AspergitBold,"Nunito", sans-serif;
   font-size: $font-big;
   font-weight: $font-bold;
@@ -96,10 +95,10 @@ h2 {
   text-align: left;
 }
 
-// h1 {
-//   font-family: AspergitBold, 'Nunito', sans-serif;
-//   font-size: $font-large;
-//   font-weight: $font-bold;
-//   line-height: $lineSpacing-large;
-//   text-align: left;
-// }
+h1 {
+  font-family: AspergitBold, 'Nunito', sans-serif;
+  font-size: $font-large;
+  font-weight: $font-bold;
+  line-height: $lineSpacing-large;
+  text-align: left;
+}

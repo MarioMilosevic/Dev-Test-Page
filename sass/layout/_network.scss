@@ -1,7 +1,113 @@
 .network {
-    margin-top: 30rem;
-    width: 126.6rem;
-    height: 89.2rem;
-    margin-left: 25.8rem;
-    border: 1px solid white;
+  @include respond(phone) {
+    margin-top: 55rem;
+    padding-bottom: 30rem;
+  }
+
+  @include respond(tablet) {
+    margin-top: 75rem;
+    padding-bottom: 30rem;
+  }
+  @include respond(desktop) {
+    margin-top: 50rem;
+    padding-bottom: 30rem;
+  }
+
+  &__container {
+    position: relative;
+
+    @include respond(phone) {
+      margin-left: 2rem;
+    }
+
+    @include respond(tablet) {
+      margin-left: 5rem;
+    }
+
+    @include respond(desktop) {
+      border: 1px solid white;
+      padding-bottom: 15rem;
+      margin-left: 25.8rem;
+      width: 126.6rem;
+      height: 89.2rem;
+    }
+
+    &-title {
+      text-transform: uppercase;
+
+      @include respond(phone) {
+        font-size: $font-small;
+      }
+
+      @include respond(tablet) {
+        font-size: $font-medium;
+      }
+
+      @include respond(desktop) {
+      }
+    }
+
+    &-span {
+      color: $color-green;
+    }
+
+    &-lines {
+      position: absolute;
+      top: -4rem;
+      right: 10rem;
+    }
+
+    &-channel {
+      position: absolute;
+
+      &:nth-of-type(2) {
+        top: 54rem;
+        left: 2rem;
+      }
+
+      &:nth-of-type(3) {
+        top: 32rem;
+        left: 32rem;
+      }
+
+      &:nth-of-type(4) {
+        top: 47rem;
+        left: 68rem;
+      }
+
+      &:nth-of-type(5) {
+        top: 72rem;
+        left: 78rem;
+      }
+
+      &:nth-of-type(6) {
+        top: 74rem;
+        left: 95rem;
+      }
+      &:nth-of-type(7) {
+        top: 56rem;
+        left: 104rem;
+      }
+
+      &---vectorImg {
+        width: 5%;
+      }
+
+      &---logoImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 }
+
+//  @include respond(phone) {
+//   }
+
+//   @include respond(tablet) {
+//   }
+
+//   @include respond(desktop) {
+//   }

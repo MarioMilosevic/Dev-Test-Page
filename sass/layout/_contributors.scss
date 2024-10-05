@@ -1,14 +1,48 @@
 .contributors {
-  padding-top: 96rem;
   position: relative;
-
   @include respond(phone) {
+    padding-top: 190rem;
   }
 
   @include respond(tablet) {
+    padding-top: 127rem;
   }
 
   @include respond(desktop) {
+    padding-top: 96rem;
+  }
+
+  &__leftVectors {
+    position: absolute;
+    left: 2rem;
+
+    @include respond(phone) {
+      bottom: -50rem;
+    }
+
+    @include respond(tablet) {
+      bottom: -70rem;
+    }
+
+    @include respond(desktop) {
+      bottom: -40rem;
+    }
+  }
+
+  &__rightVector {
+    position: absolute;
+    right: 2rem;
+    @include respond(phone) {
+      bottom: -50rem;
+    }
+
+    @include respond(tablet) {
+      bottom: -70rem;
+    }
+
+    @include respond(desktop) {
+      bottom: -40rem;
+    }
   }
 
   &__container {
@@ -38,10 +72,10 @@
       color: $color-green;
       position: static;
       @include respond(phone) {
-        position:absolute;
+        position: absolute;
         top: 10rem;
         right: 3rem;
-  }
+      }
     }
 
     &-tertiaryTitle {
@@ -51,10 +85,10 @@
     &-job {
       font-size: 24px;
       @include respond(phone) {
-        position:absolute;
+        position: absolute;
         top: 20rem;
         right: 5rem;
-  }
+      }
     }
 
     &-articles {

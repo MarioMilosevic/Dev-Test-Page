@@ -12,7 +12,6 @@
 
   @include respond(desktop) {
     padding-top: 30rem;
-    //   padding-bottom: 50rem;
   }
 
   &__leftVector {
@@ -55,9 +54,6 @@
       max-height: 46.4rem;
     }
 
-    // &-image {
-
-    // }
 
     &-title {
       color: $color-green;
@@ -145,8 +141,8 @@
         }
 
         @include respond(desktop) {
-          top: 12rem;
-          left: -7rem;
+          top: 15rem;
+          left: -8rem;
         }
       }
     }
