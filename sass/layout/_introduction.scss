@@ -1,6 +1,4 @@
 .introduction {
-  border: 1px solid white;
-
   position: relative;
 
   @include respond(phone) {
@@ -58,8 +56,21 @@
 
   &__rightVectors {
     position: absolute;
-    top: 100rem;
-    right: -25rem;
+
+    @include respond(phone) {
+      top: 73rem;
+      right: 0rem;
+    }
+
+    @include respond(tablet) {
+      top: 91rem;
+      right: 0rem;
+    }
+
+    @include respond(desktop) {
+      top: 100rem;
+      right: -25rem;
+    }
   }
   &__lines {
     position: absolute;
