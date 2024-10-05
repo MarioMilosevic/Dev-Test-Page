@@ -1,12 +1,12 @@
 .network {
   @include respond(phone) {
     margin-top: 55rem;
-    padding-bottom: 30rem;
+    padding-bottom: 76rem;
   }
 
   @include respond(tablet) {
     margin-top: 75rem;
-    padding-bottom: 30rem;
+    padding-bottom: 65rem;
   }
   @include respond(desktop) {
     margin-top: 50rem;
@@ -25,7 +25,6 @@
     }
 
     @include respond(desktop) {
-      border: 1px solid white;
       padding-bottom: 15rem;
       margin-left: 25.8rem;
       width: 126.6rem;
@@ -37,10 +36,12 @@
 
       @include respond(phone) {
         font-size: $font-small;
+        line-height: $lineSpacing-medium;
       }
 
       @include respond(tablet) {
         font-size: $font-medium;
+        line-height: $lineSpacing-big;
       }
 
       @include respond(desktop) {
@@ -61,44 +62,116 @@
       position: absolute;
 
       &:nth-of-type(2) {
-        top: 54rem;
-        left: 2rem;
+        @include respond(phone) {
+          top: 10rem;
+          left: -2rem;
+        }
+
+        @include respond(tablet) {
+          top: 23rem;
+          left: -2rem;
+        }
+
+        @include respond(desktop) {
+          top: 54rem;
+          left: 2rem;
+        }
       }
 
       &:nth-of-type(3) {
-        top: 32rem;
-        left: 32rem;
+        @include respond(phone) {
+          top: 43rem;
+          left: -2rem;
+        }
+
+        @include respond(tablet) {
+          top: 19rem;
+          left: 36rem;
+        }
+
+        @include respond(desktop) {
+          top: 32rem;
+          left: 32rem;
+        }
       }
 
       &:nth-of-type(4) {
-        top: 47rem;
-        left: 68rem;
+        @include respond(phone) {
+          top: 0rem;
+          left: 30rem;
+        }
+
+        @include respond(tablet) {
+          top: 57rem;
+          left: 0rem;
+        }
+
+        @include respond(desktop) {
+          top: 47rem;
+          left: 68rem;
+        }
       }
 
       &:nth-of-type(5) {
-        top: 72rem;
-        left: 78rem;
+        @include respond(phone) {
+          top: 26rem;
+          left: 34rem;
+        }
+
+        @include respond(tablet) {
+          top: 48rem;
+          left: 27rem;
+        }
+
+        @include respond(desktop) {
+          top: 72rem;
+          left: 78rem;
+        }
       }
 
       &:nth-of-type(6) {
-        top: 74rem;
-        left: 95rem;
+        @include respond(phone) {
+          top: 43rem;
+          left: 34rem;
+        }
+
+        @include respond(tablet) {
+          top: 58rem;
+          left: 44rem;
+        }
+
+        @include respond(desktop) {
+          top: 74rem;
+          left: 95rem;
+        }
       }
       &:nth-of-type(7) {
-        top: 56rem;
-        left: 104rem;
+        @include respond(phone) {
+          top: 63rem;
+          left: 33rem;
+        }
+
+        @include respond(tablet) {
+          top: 66rem;
+          left: 25rem;
+        }
+
+        @include respond(desktop) {
+          top: 55rem;
+          left: 103rem;
+        }
       }
 
-      &---vectorImg {
-        width: 5%;
-      }
+      // &---vectorImg {
+      //   width: 5%;
+      // }
 
-      &---logoImg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+      // &---logoImg {
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      // }
     }
   }
 }
