@@ -1,26 +1,27 @@
 .header {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 
   @include respond(phone) {
-    padding: 0 1rem;
+    padding: 1rem;
   }
-  @include respond(tablet) {
-    padding: 0 3rem;
+  @include respond(tab-port) {
+    padding: 1.5rem 3rem;
+  }
+  @include respond(tab-land) {
+    padding: 2rem 3rem;
   }
   @include respond(desktop) {
-    padding: 0 16rem;
+    padding: 3rem 10rem;
   }
 
   &__vector {
     position: absolute;
+    bottom: -5rem;
     left: 50%;
     transform: translate(50%, 0);
-    width: 6rem;
-    height: 6rem;
 
     @include respond(phone) {
       left: 45%;
@@ -32,24 +33,7 @@
     height: 4rem;
   }
 
-  &__firstHr {
-    position: absolute;
-
-    @include respond(phone) {
-      top: 2.2rem;
-      left: 18rem;
-    }
-    @include respond(tablet) {
-      top: 3.4rem;
-      left: 20rem;
-    }
-    @include respond(desktop) {
-      top: 3.6rem;
-      left: 33rem;
-    }
-  }
-
-  &__secondHr {
+  &__hr {
     position: absolute;
     top: 50%;
     left: 8rem;
@@ -61,46 +45,31 @@
     @include respond(tablet) {
       display: none;
     }
-    @include respond(tablet) {
-      display: none;
-    }
+
     @include respond(desktop) {
       display: block;
     }
   }
 
   &__list {
-    @include respond(desktop) {
-      display: flex;
-    }
-
     @include respond(phone) {
       display: none;
     }
-    @include respond(tablet) {
+    @include respond(tab-port) {
       display: none;
     }
-    @include respond(tablet) {
-      display: none;
+    @include respond(tab-land) {
+      display: flex;
+      gap: 3rem;
+    }
+    @include respond(desktop) {
+      display: flex;
+      gap: 3rem;
     }
 
     position: relative;
     list-style: none;
-    // display: flex;
     justify-content: space-between;
-    width: 24.3rem;
-    height: 3.2rem;
-
-    li:not(:last-child) {
-      width: 6.2rem;
-      height: 3.2rem;
-    }
-
-    li:last-child {
-      width: 14.5rem;
-      height: 3.2rem;
-    }
-
     a {
       text-decoration: none;
       color: $color-light;
@@ -114,6 +83,14 @@
         display: block;
       }
 
+      @include respond(tab-port) {
+        display: block;
+      }
+
+      @include respond(tab-land) {
+        display: none;
+      }
+
       @include respond(desktop) {
         display: none;
       }
@@ -122,8 +99,6 @@
 
   &__mobileList {
     list-style: none;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
     transition-duration: 0.7s;
     transform: translateX(100%);
@@ -131,13 +106,29 @@
     right: 0;
     position: absolute;
 
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      background-color: $color-dark;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: $color-light;
+    }
+    @include respond(tab-land) {
+      display: none;
+    }
     @include respond(desktop) {
+      display: none;
     }
 
     a {
       text-decoration: none;
-      color: $color-light;
       cursor: pointer;
+      color: $color-light;
     }
 
     &-button {
@@ -148,11 +139,5 @@
       height: 30px;
       cursor: pointer;
     }
-  }
-  @include respond(tablet) {
-    height: 7rem;
-  }
-  @include respond(desktop) {
-    height: 8.6rem;
   }
 }

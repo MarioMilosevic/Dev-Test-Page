@@ -15,6 +15,7 @@
 
 @mixin respond-phone {
   @media (max-width: 600px) {
+    // 390.490
     @content;
   }
 }
@@ -25,8 +26,14 @@
       @content;
     }
   }
-  @if $breakpoint == tablet {
-    @media (min-width: 601px) and (max-width: 1500px) {
+  @if $breakpoint == tab-port {
+    @media (min-width: 601px) and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (min-width: 901px) and (max-width: 1500px) {
       @content;
     }
   }
