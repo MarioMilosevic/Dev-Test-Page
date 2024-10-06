@@ -1,212 +1,230 @@
 .hero {
-  max-width: 167.4rem;
-  max-height: 55.5rem;
+  width: 120rem;
+  // height: 55rem;
+  // padding-top: 10rem;
+  // background-color: aliceblue;
+  margin-top: 10rem;
   position: relative;
-  //   padding-bottom: 0rem;
+  border: 1px solid white;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 
-  @include respond(phone) {
-    margin: 8rem 0 0 2rem;
-    padding-bottom: 17rem;
-  }
-  @include respond(tablet) {
-    padding-bottom: 27rem;
-    margin: 8rem 0 0 5rem;
-  }
-  @include respond(desktop) {
-    margin: 17.2rem 0 0 21rem;
-    padding-bottom: 70rem;
+  // @include respond(phone) {
+  //   margin: 8rem 0 0 2rem;
+  //   padding-bottom: 17rem;
+  // }
+  // @include respond(tablet) {
+  //   padding-bottom: 27rem;
+  //   margin: 8rem 0 0 5rem;
+  // }
+  // @include respond(desktop) {
+  //   // margin: 17.2rem 0 0 21rem;
+  //   padding-bottom: 70rem;
+  // }
+
+  &__emptyDiv {
+    border: 1px solid white;
+    grid-area: 2/1/3/5;
+    // background-color: red;
   }
 
   &__titleContainer {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__title {
-    font-family: AspergitBold, "Nunito", sans-serif;
-    text-transform: uppercase;
-    max-width: 156rem;
-    max-height: 26.5rem;
-    text-align: left;
-    font-weight: $font-bold;
-    @include respond(phone) {
-      font-size: $font-small;
-      line-height: $font-small;
-    }
-    @include respond(tablet) {
-      font-size: $font-medium;
-      line-height: $font-medium;
-    }
-    @include respond(desktop) {
-      font-size: $font-large;
-      line-height: $lineSpacing-large;
-    }
-  }
-
-  &__span {
-    color: $color-green;
-  }
-
-  &__list {
-    max-height: 26.4rem;
-    list-style: none;
-    display: flex;
-    position: absolute;
-    gap: 2rem;
-    transform: translateY(50%);
-    top: 50%;
-
-    left: 5px;
-
-    @include respond(phone) {
-      top: 25%;
-      flex-direction: row;
-      gap: 2rem;
-      left: 5px;
-    }
-    @include respond(tablet) {
-      top: 30%;
-      flex-direction: row;
-      gap: 2rem;
-      left: 5px;
-    }
-
-    @include respond(desktop) {
-      position: static;
-      flex-direction: column;
-      gap: 2.4rem;
-    }
-
-    li {
-      width: 1.5rem;
-      height: 1.5rem;
-
-      @include respond(desktop) {
-        width: 2.4rem;
-        height: 2.4rem;
-      }
-    }
+    border: 1px solid white;
+    grid-area: 1 / 1 / 2 / 8;
+    // background-color: yellow;
+    // display: flex;
+    // justify-content: space-between;
   }
 
   &__paragraph {
-    max-width: 65.7rem;
-    max-height: 6.6rem;
-    margin-top: 1.7rem;
-
-    @include respond(phone) {
-      margin-top: 10rem;
-      margin-left: 1rem;
-      font-size: $font-extraSmall;
-    }
-
-    @include respond(tablet) {
-      margin-left: 25rem;
-      font-size: $font-small;
-    }
-
-    @include respond(desktop) {
-      margin-left: 90.3rem;
-      font-size: $font-normal;
-    }
-  }
-
-  &__cta-container {
-    max-width: 29.7rem;
-    max-height: 11.4rem;
-    position: absolute;
-
-    @include respond(phone) {
-      top: 28rem;
-      right: 25rem;
-    }
-
-    @include respond(tablet) {
-      top: 23rem;
-      right: 25rem;
-    }
-
-    @include respond(desktop) {
-      top: 45rem;
-      right: 72rem;
-    }
-
-    &__button {
-      background-color: $color-primary;
-      border: none;
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    &__img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-  }
-
-  &__vectors {
-    max-width: 27.1rem;
-    max-height: 26.6rem;
-    position: absolute;
-
-    @include respond(phone) {
-      height: 15rem;
-      width: 16rem;
-      left: 0rem;
-      top: 20rem;
-    }
-
-    @include respond(tablet) {
-      height: 20rem;
-      width: 21rem;
-      left: 20rem;
-      top: 18rem;
-    }
-
-    @include respond(desktop) {
-      width: 27.1rem;
-      height: 26.6rem;
-      left: 46.5rem;
-      top: 37.7rem;
-    }
-
-    &-lines {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-
-    &-img {
-      width: 11.4rem;
-      height: 10rem;
-    }
-  }
-
-  &__sideVectors {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: end;
-    align-items: center;
-    position: absolute;
-
-    @include respond(phone) {
-      top: 45rem;
-      width: 2rem;
-      height: 6rem;
-    }
-
-    @include respond(tablet) {
-      top: 50rem;
-      width: 6rem;
-      height: 12rem;
-    }
-
-    @include respond(desktop) {
-      width: 7.6rem;
-      height: 19rem;
-      top: 84.8rem;
-    }
+    // background-color: blue;
+    grid-area: 2 / 5 / 3 / 8;
   }
 }
+
+//   &__title {
+//     max-width: 156rem;
+//     max-height: 26.5rem;
+//     @include respond(phone) {
+//       font-size: $font-small;
+//       line-height: $font-small;
+//     }
+//     @include respond(tablet) {
+//       font-size: $font-medium;
+//       line-height: $font-medium;
+//     }
+//     @include respond(desktop) {
+//       font-size: $font-veryBig;
+//       line-height: $lineSpacing-veryBig;
+//     }
+//   }
+
+//   &__span {
+//     color: $color-green;
+//   }
+
+//   &__list {
+//     max-height: 26.4rem;
+//     list-style: none;
+//     display: flex;
+//     position: absolute;
+//     gap: 2rem;
+//     transform: translateY(50%);
+//     top: 50%;
+
+//     left: 5px;
+
+//     @include respond(phone) {
+//       top: 25%;
+//       flex-direction: row;
+//       gap: 2rem;
+//       left: 5px;
+//     }
+//     @include respond(tablet) {
+//       top: 30%;
+//       flex-direction: row;
+//       gap: 2rem;
+//       left: 5px;
+//     }
+
+//     @include respond(desktop) {
+//       position: static;
+//       flex-direction: column;
+//       gap: 2.4rem;
+//     }
+
+//     li {
+//       width: 1.5rem;
+//       height: 1.5rem;
+
+//       @include respond(desktop) {
+//         width: 2.4rem;
+//         height: 2.4rem;
+//       }
+//     }
+//   }
+
+//   &__paragraph {
+//     // max-width: 65.7rem;
+//     // max-height: 6.6rem;
+//     // margin-top: 1.7rem;
+//     grid-area: 1 / 5 / 2 / 8;
+
+//     @include respond(phone) {
+//       margin-top: 10rem;
+//       margin-left: 1rem;
+//       font-size: $font-extraSmall;
+//     }
+
+//     @include respond(tablet) {
+//       margin-left: 25rem;
+//       font-size: $font-small;
+//     }
+
+//     @include respond(desktop) {
+//       margin-left: 90.3rem;
+//       font-size: $font-normal;
+//     }
+//   }
+
+//   &__cta-container {
+//     max-width: 29.7rem;
+//     max-height: 11.4rem;
+//     position: absolute;
+
+//     @include respond(phone) {
+//       top: 28rem;
+//       right: 25rem;
+//     }
+
+//     @include respond(tablet) {
+//       top: 23rem;
+//       right: 25rem;
+//     }
+
+//     @include respond(desktop) {
+//       top: 45rem;
+//       right: 72rem;
+//     }
+
+//     &__button {
+//       background-color: $color-primary;
+//       border: none;
+//       cursor: pointer;
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//     }
+
+//     &__img {
+//       position: absolute;
+//       bottom: 0;
+//       right: 0;
+//     }
+//   }
+
+//   &__vectors {
+//     max-width: 27.1rem;
+//     max-height: 26.6rem;
+//     position: absolute;
+
+//     @include respond(phone) {
+//       height: 15rem;
+//       width: 16rem;
+//       left: 0rem;
+//       top: 20rem;
+//     }
+
+//     @include respond(tablet) {
+//       height: 20rem;
+//       width: 21rem;
+//       left: 20rem;
+//       top: 18rem;
+//     }
+
+//     @include respond(desktop) {
+//       width: 27.1rem;
+//       height: 26.6rem;
+//       left: 46.5rem;
+//       top: 37.7rem;
+//     }
+
+//     &-lines {
+//       position: absolute;
+//       bottom: 0;
+//       right: 0;
+//     }
+
+//     &-img {
+//       width: 11.4rem;
+//       height: 10rem;
+//     }
+//   }
+
+//   &__sideVectors {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     justify-items: end;
+//     align-items: center;
+//     position: absolute;
+
+//     @include respond(phone) {
+//       top: 45rem;
+//       width: 2rem;
+//       height: 6rem;
+//     }
+
+//     @include respond(tablet) {
+//       top: 50rem;
+//       width: 6rem;
+//       height: 12rem;
+//     }
+
+//     @include respond(desktop) {
+//       width: 7.6rem;
+//       height: 19rem;
+//       top: 84.8rem;
+//     }
+//   }
+// }

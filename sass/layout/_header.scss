@@ -64,7 +64,7 @@
     }
     @include respond(desktop) {
       display: flex;
-      gap: 3rem;
+      gap: 5rem;
     }
 
     position: relative;

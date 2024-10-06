@@ -13,7 +13,7 @@ $font-normal: 30px;
 $font-medium: 44px;
 $font-big: 54px;
 $font-veryBig: 94px;
-$font-large: 113px;
+// $font-large: 113px;
 
 $lineSpacing-extraSmall: 19.98px;
 $lineSpacing-smaller: 30px;
@@ -22,7 +22,7 @@ $lineSpacing-normal: 33px;
 $lineSpacing-medium: 50px;
 $lineSpacing-big: 77px;
 $lineSpacing-veryBig: 109.98px;
-$lineSpacing-large: 132.21px;
+// $lineSpacing-large: 132.21px;
 
 $font-bold: 700;
 $font-light: 300;
@@ -106,8 +106,8 @@ h1 {
     line-height: $lineSpacing-big;
   }
   @include respond(desktop) {
-    font-size: $font-large;
+    font-size: $font-veryBig;
     font-weight: $font-bold;
-    line-height: $lineSpacing-large;
+    line-height: $lineSpacing-veryBig;
   }
 }
