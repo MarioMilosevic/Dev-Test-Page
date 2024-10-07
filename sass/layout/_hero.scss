@@ -7,18 +7,24 @@
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(7, 1fr);
 
-  // @include respond(phone) {
-  //   margin: 8rem 0 0 2rem;
-  //   padding-bottom: 17rem;
-  // }
-  // @include respond(tablet) {
-  //   padding-bottom: 27rem;
-  //   margin: 8rem 0 0 5rem;
-  // }
-  // @include respond(desktop) {
-  //   // margin: 17.2rem 0 0 21rem;
-  //   padding-bottom: 70rem;
-  // }
+  @include respond(phone) {
+    // background-color: yellow;
+  }
+  @include respond(tab-port){
+    // background-color: green;
+  max-width: 75rem;
+
+
+  }
+  @include respond(tab-land) {
+    // background-color: blue;
+  max-width: 95rem;
+  }
+  @include respond(desktop) {
+  // background-color: red;
+  max-width: 120rem;
+
+  }
 
   &__list {
     position: absolute;
@@ -66,6 +72,7 @@
       button {
         background-color: $color-primary;
         border: none;
+        cursor: pointer;
       }
 
       &--vector {
