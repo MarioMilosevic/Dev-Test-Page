@@ -1,150 +1,70 @@
 .testimonials {
   position: relative;
-  padding-bottom: 50rem;
-
-  @include respond(phone) {
-    padding-top: 5rem;
-  }
-
-  @include respond(tablet) {
-    padding-top: 15rem;
-  }
-
-  @include respond(desktop) {
-    padding-top: 30rem;
-  }
 
   &__leftVector {
     position: absolute;
-    top: -8px;
-    left: 20px;
-  }
-
-  &__colorVectors {
-    position: absolute;
-    right: 50%;
-    top: 20rem;
-    transform: translateX(50%);
-
-    @include respond(phone) {
-      top: 8rem;
-    }
+    top: 1rem;
+    left: 1rem;
   }
 
   &__container {
-    padding-top: 5rem;
+    max-width: 100rem;
+    position: relative;
+    padding: 20rem 0rem;
+    display: grid;
+    column-gap: 5rem;
+    // grid-template-rows: auto 1fr 1fr;
+    // grid-template-rows: repeat(3, 1fr minmax(1rem));
+    grid-template-columns: repeat(6, 1fr);
 
-    display: flex;
-
-    @include respond(phone) {
-      padding-top: 8rem;
-      flex-direction: column;
+    &-lines {
+      position: absolute;
+      top: 10rem;
+      right: 50%;
+      transform: translateX(50%);
     }
 
-    @include respond(tablet) {
-      flex-direction: column;
-      padding-top: 8rem;
-    }
-
-    @include respond(desktop) {
-      flex-direction: row;
-      padding-top: 5rem;
-      margin-left: 28.7rem;
-      max-width: 134.7rem;
-      max-height: 46.4rem;
-    }
-
-
-    &-title {
-      color: $color-green;
-      @include respond(phone) {
-        font-size: $font-small;
-      }
-      @include respond(tablet) {
-        font-size: $font-medium;
-      }
-    }
-    &-subtitle {
-      padding-bottom: 5rem;
-
-      @include respond(phone) {
-        font-size: $font-small;
-      }
-      @include respond(tablet) {
-        font-size: $font-normal;
-      }
-    }
-
-    &-founder {
+    &-image {
+      grid-area: 1/1/3/4;
       position: relative;
+      height: 500px;
 
-      @include respond(phone) {
-        padding-left: 7rem;
+      :nth-of-type(1) {
+        width: 100%;
+        height: 100%;
       }
-
-      @include respond(tablet) {
-        padding-left: 8rem;
-      }
-
-      @include respond(desktop) {
-        padding-left: 18rem;
-      }
-
-      &--img {
+      :nth-of-type(2) {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 73%;
+        left: 81%;
+      }
+    }
+
+    &-info {
+      grid-area: 1/4 /2/7;
+      h3 {
+        color: $color-green;
       }
     }
 
     &-text {
-      @include respond(phone) {
-        font-size: $font-extraSmall;
-      }
-      @include respond(tablet) {
-        font-size: $font-small;
-      }
-      @include respond(desktop) {
-        font-size: $font-normal;
-      }
+      grid-area: 2/4/3/7;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding-top: 2rem;
+    }
 
-      &--singleVector {
-        position: absolute;
+    &-vector {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
-        @include respond(phone) {
-          top: 27rem;
-          right: 1rem;
-        }
-
-        @include respond(tablet) {
-          top: 40rem;
-          right: 1rem;
-        }
-
-        @include respond(desktop) {
-          top: 50rem;
-          right: 1rem;
-        }
-      }
-
-      &--doubleVector {
-        position: absolute;
-
-        @include respond(phone) {
-          top: -31rem;
-          left: 32rem;
-        }
-
-        @include respond(tablet) {
-          top: -31rem;
-          left: 34rem;
-        }
-
-        @include respond(desktop) {
-          top: 15rem;
-          left: -8rem;
-        }
-      }
+    &-rightVector {
+      position: absolute;
+      bottom: 5rem;
+      right: 0rem;
     }
   }
 }
