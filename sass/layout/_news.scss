@@ -1,17 +1,42 @@
 .news {
-  max-width: 100rem;
-  padding-bottom: 7rem;
+  padding: 10rem 5rem;
+
   &__container {
+    padding-top: 5rem;
     display: flex;
     gap: 5rem;
-    width: 100%;
+
+    @include respond(small) {
+      flex-direction: column;
+    }
+    @include respond(medium) {
+      flex-direction: column;
+    }
+    @include respond(big) {
+      flex-direction: row;
+    }
+    @include respond(large) {
+      flex-direction: row;
+    }
 
     &-div {
-      width: 50%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       position: relative;
+
+      @include respond(small) {
+        width: 100%;
+      }
+      @include respond(medium) {
+        width: 100%;
+      }
+      @include respond(big) {
+        width: 50%;
+      }
+      @include respond(large) {
+        width: 50%;
+      }
 
       &-image {
         width: 100%;
@@ -38,7 +63,7 @@
     :nth-of-type(1) {
       position: absolute;
       top: 0%;
-      left: -11%;
+      left: -2%;
     }
     :nth-of-type(2) {
       position: absolute;
@@ -49,10 +74,22 @@
 
   &__footer {
     padding-top: 15rem;
-    width: 75%;
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include respond(small) {
+      width: 100;
+    }
+    @include respond(medium) {
+      width: 100%;
+    }
+    @include respond(big) {
+      width: 75%;
+    }
+    @include respond(large) {
+      width: 75%;
+    }
 
     ul {
       list-style: none;
@@ -71,8 +108,23 @@
 
     img {
       position: absolute;
-      bottom: 0%;
-      right: -14%;
+
+      @include respond(small) {
+        top: 70%;
+        right: -27%;
+      }
+      @include respond(medium) {
+        top: 70%;
+        right: -27%;
+      }
+      @include respond(big) {
+        bottom: 0%;
+        right: -27%;
+      }
+      @include respond(large) {
+        bottom: 0%;
+        right: -14%;
+      }
     }
   }
 }

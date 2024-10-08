@@ -3,31 +3,76 @@
 
   &__leftVector {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1%;
+    left: 1%;
   }
 
   &__container {
-    max-width: 100rem;
     position: relative;
-    padding: 20rem 0rem;
-    display: grid;
-    column-gap: 5rem;
-    // grid-template-rows: auto 1fr 1fr;
-    // grid-template-rows: repeat(3, 1fr minmax(1rem));
-    grid-template-columns: repeat(6, 1fr);
+
+    @include respond(small) {
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @include respond(medium) {
+      padding: 5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @include respond(big) {
+      padding: 10rem 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @include respond(large) {
+      padding: 20rem 10rem;
+      display: grid;
+      column-gap: 5rem;
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     &-lines {
       position: absolute;
-      top: 10rem;
-      right: 50%;
+
       transform: translateX(50%);
+
+      @include respond(small) {
+        top: 2%;
+        right: 50%;
+      }
+      @include respond(medium) {
+        top: 2%;
+        right: 50%;
+      }
+      @include respond(big) {
+        top: 5%;
+        right: 50%;
+      }
+      @include respond(large) {
+        top: 5%;
+        right: 50%;
+      }
     }
 
     &-image {
       grid-area: 1/1/3/4;
       position: relative;
-      height: 500px;
+
+      @include respond(small) {
+      }
+      @include respond(medium) {
+      }
+      @include respond(big) {
+        height: 50rem;
+        width: 75%;
+      }
+      @include respond(large) {
+        height: 50rem;
+      }
 
       :nth-of-type(1) {
         width: 100%;
@@ -63,8 +108,23 @@
 
     &-rightVector {
       position: absolute;
-      bottom: 5rem;
-      right: 0rem;
+
+      @include respond(small) {
+        bottom: 0%;
+        right: 0%;
+      }
+      @include respond(medium) {
+        bottom: 0%;
+        right: 0%;
+      }
+      @include respond(big) {
+        bottom: 5%;
+        right: 0%;
+      }
+      @include respond(large) {
+        bottom: 5%;
+        right: 0%;
+      }
     }
   }
 }

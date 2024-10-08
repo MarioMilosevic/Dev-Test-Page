@@ -1,10 +1,22 @@
 .network {
-  width: 100rem;
-  padding-top: 10rem;
+  @include respond(small) {
+    padding: 5rem;
+  }
+  @include respond(medium) {
+    padding: 5rem;
+  }
+  @include respond(big) {
+    padding: 10rem 5rem;
+  }
+  @include respond(large) {
+    padding: 10rem 5rem;
+  }
 
   &__vectorsContainer {
     position: relative;
     height: 30rem;
+    margin-bottom: 5rem;
+    width: 100%;
 
     :nth-of-type(1) {
       position: absolute;
@@ -16,11 +28,29 @@
       bottom: 0%;
       right: 15%;
     }
+
     :nth-of-type(3) {
       position: absolute;
-      bottom: 50%;
-      left: 100%;
-      transform: translateY(50%);
+      @include respond(small) {
+        bottom: 50%;
+        right: -5%;
+        transform: translateY(50%);
+      }
+      @include respond(medium) {
+        bottom: 50%;
+        right: -5%;
+        transform: translateY(50%);
+      }
+      @include respond(big) {
+        bottom: 50%;
+        right: -4%;
+        transform: translateY(50%);
+      }
+      @include respond(large) {
+        bottom: 50%;
+        right: -4%;
+        transform: translateY(50%);
+      }
     }
   }
   span {
@@ -32,16 +62,15 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-
-    :nth-of-type(1){
+    :nth-of-type(1) {
       background-color: red;
       grid-area: 2/1/3/2;
     }
-    :nth-of-type(2){
+    :nth-of-type(2) {
       background-color: blue;
       grid-area: 1/2/2/3;
     }
-    :nth-of-type(3){
+    :nth-of-type(3) {
       background-color: blue;
       grid-area: 1/3/2/4;
     }

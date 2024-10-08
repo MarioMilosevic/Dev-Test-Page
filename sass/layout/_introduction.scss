@@ -1,25 +1,26 @@
 .introduction {
-  max-width: 100rem;
   position: relative;
-  padding: 20rem 0;
+  padding: 20rem 5rem;
 
   &__dots {
     position: absolute;
     top: -20%;
-    right: -13%;
+    right: 0%;
   }
 
   &__heading {
     position: relative;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
 
     &-first {
       position: absolute;
-      top: -10%;
-      left: -12%;
+      top: -60%;
+      left: -5%;
     }
     &-second {
       position: absolute;
-      top: 20%;
+      top: -20%;
       right: 5%;
     }
   }
@@ -32,8 +33,42 @@
     }
     :nth-of-type(2) {
       position: absolute;
-      bottom: -20%;
-      right: -12%;
+      @include respond(small) {
+        bottom: -50%;
+        right: -2%;
+      }
+      @include respond(medium) {
+        bottom: -40%;
+        right: -2%;
+      }
+      @include respond(big) {
+        bottom: -30%;
+        right: -2%;
+      }
+      @include respond(large) {
+        bottom: -25%;
+        right: -2%;
+      }
+    }
+    :nth-of-type(3) {
+      position: absolute;
+
+      @include respond(small) {
+        bottom: -90%;
+        left: -3%;
+      }
+      @include respond(medium) {
+        bottom: -80%;
+        left: -3%;
+      }
+      @include respond(big) {
+        bottom: -55%;
+        left: -3%;
+      }
+      @include respond(large) {
+        bottom: -45%;
+        left: -3%;
+      }
     }
   }
 }
