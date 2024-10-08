@@ -1,180 +1,49 @@
 .news {
-  position: relative;
-  @include respond(phone) {
-    margin-left: 1rem;
-  }
-
-  @include respond(tablet) {
-    margin-left: 5rem;
-  }
-
-  @include respond(desktop) {
-    width: 137.5rem;
-    margin-left: 25.8rem;
-  }
-
-  &__logoContainer {
-    display: flex;
-    padding-top: 15rem;
-    padding-left: 3rem;
-    justify-content: space-between;
-
-    @include respond(phone) {
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    @include respond(tablet) {
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    @include respond(desktop) {
-      width: 75rem;
-      flex-direction: row;
-    }
-
-    &-links {
-      list-style: none;
-
-      @include respond(phone) {
-        display: flex;
-        gap: 3rem;
-      }
-
-      @include respond(tablet) {
-        display: flex;
-        gap: 3rem;
-      }
-
-      @include respond(desktop) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-      }
-    }
-
-    &-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      a {
-        text-decoration: none;
-        color: $color-light;
-      }
-    }
-  }
+  max-width: 100rem;
 
   &__container {
-    display: grid;
-    position: relative;
+    display: flex;
+    gap: 5rem;
+    width: 100%;
 
-    @include respond(tablet) {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 2;
-    }
-
-    @include respond(desktop) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 5rem;
-    }
-
-    &-leftVector {
-      position: absolute;
-
-      @include respond(phone) {
-        top: 54rem;
-        left: 33rem;
-      }
-      @include respond(tablet) {
-        top: 61rem;
-        left: 67rem;
-      }
-
-      @include respond(desktop) {
-        top: 63rem;
-        left: -14rem;
-      }
-    }
-
-    &-lines {
-      position: absolute;
-
-      @include respond(phone) {
-        top: 52rem;
-        right: 0rem;
-      }
-
-      @include respond(tablet) {
-        top: 52rem;
-        right: 0rem;
-      }
-
-      @include respond(desktop) {
-        top: 64rem;
-        right: 12rem;
-      }
-    }
-
-    &-article {
+    &-div {
+      width: 50%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      position: relative;
 
-      &--span {
-        text-transform: uppercase;
-        color: $color-green;
-      }
-
-      &--image {
-        width: 20rem;
-      }
-    }
-
-    &-rightVectors {
-      position: absolute;
-
-      @include respond(phone) {
-        bottom: 0rem;
-        right: -26rem;
-      }
-
-      @include respond(tablet) {
-        bottom: 0rem;
-        right: 0rem;
-      }
-
-      @include respond(desktop) {
-        bottom: 0rem;
-        right: 0rem;
-      }
-    }
-
-    &-image {
-      padding: 1rem;
-      img {
+      &-image {
         width: 100%;
+      }
+
+      span {
+        color: $color-green;
+        text-transform: uppercase;
+      }
+
+      &-button {
+        position: absolute;
+        bottom: -20%;
+        left: 0%;
       }
     }
   }
 
-  &__footer {
-    text-align: center;
-    padding-top: 15rem;
-    padding-bottom: 2rem;
-
-    @include respond(phone) {
-      text-align: left;
+  &__vectorsContainer {
+    margin-top: 15rem;
+    padding: 5rem 0;
+    height: 20rem;
+    position: relative;
+    :nth-of-type(1) {
+      position: absolute;
+      top: 0%;
+      left: -11%;
     }
-
-    @include respond(tablet) {
-      text-align: center;
-    }
-
-    @include respond(desktop) {
-      text-align: center;
+    :nth-of-type(2) {
+      position: absolute;
+      bottom: 0%;
+      right: 15%;
     }
   }
 }
