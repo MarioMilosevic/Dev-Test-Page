@@ -1,6 +1,6 @@
 .news {
   max-width: 100rem;
-
+  padding-bottom: 7rem;
   &__container {
     display: flex;
     gap: 5rem;
@@ -44,6 +44,35 @@
       position: absolute;
       bottom: 0%;
       right: 15%;
+    }
+  }
+
+  &__footer {
+    padding-top: 15rem;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    ul {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $color-light;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 10rem;
+    position: relative;
+    text-align: center;
+
+    img {
+      position: absolute;
+      bottom: 0%;
+      right: -14%;
     }
   }
 }
