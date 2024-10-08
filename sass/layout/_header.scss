@@ -4,17 +4,17 @@
   justify-content: space-between;
   position: relative;
 
-  @include respond(phone) {
+  @include respond(small) {
     padding: 1rem;
   }
-  @include respond(tab-port) {
+  @include respond(medium) {
     padding: 1.5rem 3rem;
   }
-  @include respond(tab-land) {
+  @include respond(big) {
     padding: 2rem 3rem;
   }
-  @include respond(desktop) {
-    padding: 3rem 10rem;
+  @include respond(large) {
+    padding: 2rem 3rem;
   }
 
   &__vector {
@@ -23,14 +23,9 @@
     left: 50%;
     transform: translate(50%, 0);
 
-    @include respond(phone) {
+    @include respond(small) {
       left: 45%;
     }
-  }
-
-  &__logo {
-    width: 21.717rem;
-    height: 4rem;
   }
 
   &__hr {
@@ -38,31 +33,20 @@
     top: 50%;
     left: 8rem;
     transform: translateY(50%);
-
-    @include respond(phone) {
-      display: none;
-    }
-    @include respond(tablet) {
-      display: none;
-    }
-
-    @include respond(desktop) {
-      display: block;
-    }
   }
 
   &__list {
-    @include respond(phone) {
+    @include respond(small) {
       display: none;
     }
-    @include respond(tab-port) {
+    @include respond(medium) {
       display: none;
     }
-    @include respond(tab-land) {
+    @include respond(big) {
       display: flex;
       gap: 3rem;
     }
-    @include respond(desktop) {
+    @include respond(large) {
       display: flex;
       gap: 5rem;
     }
@@ -79,19 +63,18 @@
       width: 50px;
       cursor: pointer;
 
-      @include respond(phone) {
+      @include respond(small) {
         display: block;
       }
 
-      @include respond(tab-port) {
+      @include respond(medium) {
         display: block;
       }
 
-      @include respond(tab-land) {
+      @include respond(big) {
         display: none;
       }
-
-      @include respond(desktop) {
+      @include respond(large) {
         display: none;
       }
     }

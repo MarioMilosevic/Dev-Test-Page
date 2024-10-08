@@ -1,39 +1,50 @@
 .hero {
-  max-width: 120rem;
-  padding-bottom: 10rem;
   margin-top: 10rem;
   position: relative;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(10rem, auto));
   grid-template-columns: repeat(7, 1fr);
 
-  @include respond(phone) {
-    // background-color: yellow;
+  @include respond(small) {
+    padding: 2rem;
   }
-  @include respond(tab-port){
-    // background-color: green;
-  max-width: 75rem;
-
-
+  @include respond(medium) {
+    padding: 5rem 3rem;
   }
-  @include respond(tab-land) {
-    // background-color: blue;
-  max-width: 95rem;
-  }
-  @include respond(desktop) {
-  // background-color: red;
-  max-width: 120rem;
 
+  @include respond(big) {
+    padding: 10rem 5rem;
+  }
+  @include respond(large) {
+    padding: 10rem 5rem;
   }
 
   &__list {
     position: absolute;
     list-style: none;
     display: flex;
-    flex-direction: column;
+    right: 1rem;
     gap: 1rem;
-    top: 0rem;
-    right: -2rem;
+
+    @include respond(small) {
+      flex-direction: row;
+      top: 5rem;
+    }
+
+    @include respond(medium) {
+      flex-direction: column;
+      top: 0rem;
+    }
+
+    @include respond(big) {
+      top: 0rem;
+
+      flex-direction: column;
+    }
+    @include respond(large) {
+      top: 0rem;
+      flex-direction: column;
+    }
   }
 
   &__lines {
@@ -48,22 +59,59 @@
   }
 
   &__emptyDiv {
-    grid-area: 2/1/3/5;
     position: relative;
+
+    @include respond(small) {
+      grid-area: 2/1/3/3;
+    }
+    @include respond(medium) {
+      grid-area: 2/1/3/5;
+    }
+    @include respond(big) {
+      grid-area: 2/1/3/5;
+    }
+    @include respond(large) {
+      grid-area: 2/1/3/5;
+    }
 
     &-vector {
       position: absolute;
       top: 35%;
       left: 55%;
+
+      @include respond(small) {
+        top: 35%;
+        left: 245%;
+      }
     }
   }
 
   &__titleContainer {
     grid-area: 1 / 1 / 2 / 8;
+    h1 {
+      @include respond(small) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(medium) {
+        font-size: 3rem;
+      }
+    }
   }
 
   &__paragraph {
-    grid-area: 2 / 5 / 3 / 8;
+    @include respond(small) {
+      grid-area: 2 / 1 / 3 / 8;
+    }
+    @include respond(medium) {
+      grid-area: 2 / 5 / 3 / 8;
+    }
+    @include respond(big) {
+      grid-area: 2 / 5 / 3 / 8;
+    }
+    @include respond(large) {
+      grid-area: 2 / 5 / 3 / 8;
+    }
 
     &-button {
       margin-top: 3rem;
@@ -77,8 +125,23 @@
 
       &--vector {
         position: absolute;
-        top: 5rem;
-        left: 23rem;
+
+        @include respond(small) {
+          top: 2rem;
+          left: 49rem;
+        }
+        @include respond(medium) {
+          top: 65%;
+          left: 81%;
+        }
+        @include respond(big) {
+          top: 65%;
+          left: 65%;
+        }
+        @include respond(large) {
+          top: 65%;
+          left: 65%;
+        }
       }
     }
   }

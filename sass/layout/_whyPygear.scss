@@ -1,43 +1,105 @@
 .whyPygear {
   max-width: 100rem;
   padding: 2rem 0 10rem;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 4rem;
+
+  &__singleVector {
+    position: absolute;
+
+    @include respond(small) {
+      right: 0%;
+      top: 0%;
+    }
+    @include respond(medium) {
+      right: 0%;
+      top: 0%;
+    }
+    @include respond(big) {
+      right: 0%;
+      top: 4%;
+    }
+    @include respond(large) {
+      right: 0%;
+      top: 4%;
+    }
+  }
+
+  h1 {
+    span {
+      color: $color-green;
+    }
+  }
+
+  &__grid {
     position: relative;
-    gap: 4rem;
 
-    &__singleVector {
-      position: absolute;
-      right: -5rem;
-      top: 1rem;
+    @include respond(small) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
-
-    h1 {
-      span {
-        color: $color-green;
-      }
+    @include respond(medium) {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
     }
-
-    &__grid {
+    @include respond(big) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+    @include respond(large) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 6rem;
+    }
+
+    &--dots {
+      position: absolute;
+      transform: translateY(-50%);
+      right: -18%;
+      top: 50%;
+
+      @include respond(small) {
+        display: none;
+      }
+      @include respond(medium) {
+        display: none;
+      }
+      @include respond(big) {
+        display: block;
+      }
+      @include respond(large) {
+        display: block;
+      }
+    }
+
+    :nth-of-type(4) {
       position: relative;
+    }
 
-      &--dots {
-        position: absolute;
-        right: -20rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      :nth-of-type(4) {
-        position: relative;
-      }
+    &--doubleVector {
+      position: absolute;
 
-      &--doubleVector {
-        position: absolute;
-        top: -10rem;
-        right: -5rem;
+      @include respond(small) {
+        top: -45%;
+        right: 0%;
+      }
+      @include respond(medium) {
+        top: -45%;
+        right: 0%;
+      }
+      @include respond(big) {
+        top: -27%;
+        right: -9%;
+      }
+      @include respond(large) {
+        top: -41%;
+        right: -9%;
       }
     }
   }
+}
