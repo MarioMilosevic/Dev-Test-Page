@@ -1,85 +1,39 @@
 .introduction {
+  max-width: 100rem;
   position: relative;
+  padding: 20rem 0;
 
-  @include respond(phone) {
-    margin-left: 2rem;
-    padding-top: 2rem;
-  }
-
-  @include respond(tablet) {
-    margin-left: 5rem;
-    margin-top: 8rem;
-  }
-
-  @include respond(desktop) {
-    height: 94rem;
-    width: 137.5rem;
-    margin-left: 25.8rem;
-    padding-bottom: 130rem;
-  }
-
-  &__vector {
+  &__dots {
     position: absolute;
-
-    @include respond(phone) {
-      top: 0rem;
-      left: 45rem;
-    }
-
-    @include respond(tablet) {
-      top: 0rem;
-      left: 45rem;
-    }
-
-    @include respond(desktop) {
-      top: -2.7rem;
-      left: -13rem;
-    }
+    top: -20%;
+    right: -13%;
   }
-  &__rightVector {
-    position: absolute;
-    top: 9rem;
-    right: 24rem;
+
+  &__heading {
+    position: relative;
+
+    &-first {
+      position: absolute;
+      top: -10%;
+      left: -12%;
+    }
+    &-second {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+    }
   }
 
   &__video {
-    margin-top: 5rem;
-    @include respond(desktop) {
-      width: 134.36rem;
-      height: 66.3rem;
-    }
-
-    &-img {
+    width: 100%;
+    position: relative;
+    :nth-of-type(1) {
       width: 100%;
     }
-  }
-
-  &__rightVectors {
-    position: absolute;
-
-    @include respond(phone) {
-      top: 73rem;
-      right: 0rem;
+    :nth-of-type(2) {
+      position: absolute;
+      bottom: -20%;
+      right: -12%;
     }
-
-    @include respond(tablet) {
-      top: 91rem;
-      right: 0rem;
-    }
-
-    @include respond(desktop) {
-      top: 100rem;
-      right: -25rem;
-    }
-  }
-  &__lines {
-    position: absolute;
-    top: 120rem;
-    right: 50rem;
-  }
-  &__leftCircles {
-    position: absolute;
-    top: 120rem;
-    left: -26rem;
   }
 }
