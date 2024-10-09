@@ -4,14 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: $color-light;
-}
-
 body {
-  max-width: 1200px;
-  margin: 0 auto;
   background-color: $color-primary;
   color: $color-light;
-  position: relative;
 }

@@ -1,5 +1,6 @@
 .testimonials {
   position: relative;
+  max-width: 120rem;
 
   &__leftVector {
     position: absolute;
@@ -61,27 +62,36 @@
     &-image {
       grid-area: 1/1/3/4;
       position: relative;
-
-      @include respond(small) {
-      }
-      @include respond(medium) {
-      }
-      @include respond(big) {
-        height: 50rem;
-        width: 75%;
-      }
-      @include respond(large) {
-        height: 50rem;
-      }
+      height: 50rem;
 
       :nth-of-type(1) {
-        width: 100%;
-        height: 100%;
+        @include respond(small) {
+          width: 100%;
+        }
+      
+        @include respond(large) {
+          height: auto;
+          width: 100%;
+        }
       }
       :nth-of-type(2) {
         position: absolute;
-        top: 73%;
-        left: 81%;
+        @include respond(small) {
+          top: 84%;
+          left: 76%;
+        }
+        @include respond(medium) {
+          top: 34rem;
+          left: 32rem;
+        }
+        @include respond(big) {
+          top: 34rem;
+          left: 32rem;
+        }
+        @include respond(large) {
+          top: 34rem;
+          left: 34rem;
+        }
       }
     }
 
