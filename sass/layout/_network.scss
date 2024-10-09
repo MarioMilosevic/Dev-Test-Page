@@ -1,3 +1,5 @@
+@import "../abstracts/variables";
+
 .network {
   max-width: 120rem;
   padding: 10rem 0rem;
@@ -36,40 +38,53 @@
   &__logoContainer {
     border: 1px solid white;
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: repeat(25, 1fr);
-    max-height: 30rem;
-    column-gap: 4rem;
+    @include respond(small) {
+    }
+    @include respond(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(big) {
+      grid-template-columns: repeat(25, 1fr);
+      grid-template-rows: repeat(25, 1fr);
+      max-height: 30rem;
+      column-gap: 4rem;
+    }
+    @include respond(large) {
+      grid-template-columns: repeat(25, 1fr);
+      grid-template-rows: repeat(25, 1fr);
+      max-height: 30rem;
+      column-gap: 4rem;
 
-    :nth-of-type(1) {
-      width: 19.2rem;
-      height: 19.2rem;
-      grid-area: 9 / 1 / -1 / 5;
-    }
-    :nth-of-type(2) {
-      width: 21.6rem;
-      height: 21.6rem;
-      grid-area: 6 / 4 / 12 / 9;
-    }
-    :nth-of-type(3) {
-      width: 14.4rem;
-      height: 14.4rem;
-      grid-area: 8 / 8 / 11 / 12;
-    }
-    :nth-of-type(4) {
-      width: 9.6rem;
-      height: 9.6rem;
-      grid-area: 11 / 9 / 12 / 12;
-    }
-    :nth-of-type(5) {
-      width: 12rem;
-      height: 12rem;
-      grid-area: 11 / 11 / 12 / 13;
-    }
-    :nth-of-type(6) {
-      width: 12rem;
-      height: 12rem;
-      grid-area: 9 / 12 / 12 / 13;
+      :nth-of-type(1) {
+        width: calculateSize(4);
+        height: calculateSize(4);
+        grid-area: 9 / 1 / -1 / 5;
+      }
+      :nth-of-type(2) {
+        width: calculateSize(4.5);
+        height: calculateSize(4.5);
+        grid-area: 6 / 4 / 12 / 9;
+      }
+      :nth-of-type(3) {
+        width: calculateSize(3);
+        height: calculateSize(3);
+        grid-area: 8 / 8 / 11 / 12;
+      }
+      :nth-of-type(4) {
+        width: calculateSize(2);
+        height: calculateSize(2);
+        grid-area: 11 / 9 / 12 / 12;
+      }
+      :nth-of-type(5) {
+          width: calculateSize(2.5);
+        height: calculateSize(2.5);
+        grid-area: 11 / 11 / 12 / 13;
+      }
+      :nth-of-type(6) {
+        width: calculateSize(2.5);
+        height: calculateSize(2.5);
+        grid-area: 9 / 12 / 12 / 13;
+      }
     }
   }
 }
