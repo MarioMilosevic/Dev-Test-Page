@@ -5,6 +5,8 @@ const header = document.querySelector("header");
 const navigation = document.querySelector(".header__list-hamburger");
 const mobileNavigation = document.querySelector(".header__mobileList");
 const xButton = document.querySelector(".header__mobileList-button");
+const heroList = document.querySelector(".hero__list");
+console.log(heroList);
 
 const openNavigation = () => {
   mobileNavigation.style.visibility = "visible";
@@ -21,14 +23,11 @@ navigation.addEventListener("click", openNavigation);
 xButton.addEventListener("click", closeNavigation);
 
 window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-
   if (window.scrollY > 1000) {
-    header.classList.add("sticky");
-    console.log("da");
+    header.classList.add("stickyHeader");
+    heroList.classList.add("stickyList");
   } else {
-    header.classList.remove("sticky");
-    console.log("ne");
+    header.classList.remove("stickyHeader");
+    heroList.classList.remove("stickyList");
   }
 });
-
