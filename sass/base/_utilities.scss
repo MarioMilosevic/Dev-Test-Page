@@ -1,4 +1,13 @@
 .centerElement {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
+.sticky {
+  position: fixed !important;
+  padding-left: 3rem;
+  z-index: 10;
+  right: 50%;
+  transform: translateX(50%);
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
